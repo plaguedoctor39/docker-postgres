@@ -14,7 +14,7 @@ docker ps -a
 
 # Получить токен из логов контейнера Jupyter
 echo "Получение токена..."
-container_id=$(docker ps -q --filter "ancestor=docker-postgre-jupyter")
+container_id=$(docker ps -q --filter "name=docker-postgres-jupyter-1")
 if [ -z "$container_id" ]; then
   echo "Контейнер Jupyter не запущен. Проверьте логи."
   exit 1
