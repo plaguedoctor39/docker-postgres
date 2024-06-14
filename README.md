@@ -26,25 +26,20 @@ cd docker-postgres
 
 ```sh
 docker-compose build
-docker-compose up -d
 ```
 
-### 3. Доступ к Jupyter Notebook
+### 3. Запуск скрипта для автоматического открытия Jupyter Notebook
 
-Проверьте работающие контейнеры:
+Сделайте файл исполняемым:
 ```sh
-docker-compose ps
+chmod +x start.sh
 ```
 
-Получите URL для доступа к Jupyter Notebook с токеном:
+Запустите скрипт для автоматического открытия Jupyter Notebook:
 
 ```sh
-docker logs <jupyter_container_id>
+./start.sh
 ```
-
-Замените `<jupyter_container_id> `на фактический ID контейнера Jupyter.
-
-Откройте предоставленный URL в вашем веб-браузере или перейдите по адресу http://localhost:8888 и введите токен, полученный из логов.
 
 ### 4. Использование PostgreSQL
 
